@@ -78,8 +78,8 @@ class _PrimeNumberState extends State<PrimeNumber> {
         builder: (context, controller, child) {
           return SizedBox(
             width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
+            child: SimpleButton(
+              onTap: () {
                 if (controller.endPoint < controller.startPoint) {
                   showFlashBar(
                     context,
@@ -99,13 +99,9 @@ class _PrimeNumberState extends State<PrimeNumber> {
         builder: (context, controller, child) {
           return SizedBox(
             width: double.infinity,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
-                  controller.primeNumbers.isNotEmpty ? Colors.red : Colors.grey,
-                ),
-              ),
-              onPressed: controller.primeNumbers.isEmpty
+            child: SimpleButton(
+              backgroundColor: Colors.red,
+              onTap: controller.primeNumbers.isEmpty
                   ? null
                   : () {
                       controller.clear();
