@@ -23,7 +23,7 @@ class _PrimeNumberState extends State<PrimeNumber> {
           children: [
             Text(
               Strings.primeNumber.title,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.headline1,
             ),
             Text(Strings.primeNumber.description),
             const SizedBox(height: 24),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frisia_application/view/controller/home_controller.dart';
 import 'package:frisia_application/view/screen/home.dart';
+import 'package:frisia_application/view/themes/themes.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,10 +19,7 @@ class MyApp extends StatelessWidget {
         WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
       },
       child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme: basicTheme,
         home: MultiProvider(
           providers: [
             ChangeNotifierProvider(
